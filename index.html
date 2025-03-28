@@ -1,278 +1,346 @@
 <!doctype html>
-<html class="custom-bg" lang="ru" data-theme="dark">
+<html>
 
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="assets/app.css">
-    <link>
-
-    <script src="assets/app-BbSo8XvY.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --breakpoint-xs: 30rem;
-            --breakpoint-2xl: 100rem;
-            --breakpoint-3xl: 180rem;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/app-DJejeUAR.css"><link>
+    <script src="assets/app-YWqhOUue.js"></script>
 </head>
 
+<body class="full-screen-container min-h-screen w-auto bg-black">
 
-<body class="full-screen-container inset-0">
 
-<div class="w-full border-b-[1px] border-[#FAFAFA1A]/90 backdrop-blur-[40px] ">
-    <div class="flex justify-center items-center w-full h-16 relative">
-        <img src="img/logo-up.svg" class="absolute left-60">
-        <button
-            class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:scale-120 transition-transform duration-900">
-            Авторизоваться
-        </button>
-        <button
-            class="ml-[80px] text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:scale-120 transition-transform duration-900"
-            onclick="scrollToAnchor()">
-            FAQ
-        </button>
-        <button
-            class="ml-[80px] text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:scale-120 transition-transform duration-900"
-            onclick="scrollToDonate()">
-            Поддержка
-        </button>
-        <button
-            class="ml-[80px] text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:scale-120 transition-transform duration-900">
-            <a href="https://discord.com/invite/d2rulfg" target="_blank">Discord</a>
-        </button>
-    </div>
-</div>
-
-<div class="min-h-screen flex items-center justify-center flex-col">
-    <div>
-        <img src="img/logo.svg" class="w-[327px] h-[152px] mb-12">
-    </div>
-
+<header class="flex justify-center items-center w-screen h-16 z-200 fixed top-0">
+    <img src="img/logo-up.svg" class="absolute left-10 xl:left-60 xs:block z-10">
     <div
-        class="bg-[#00000003]/1 w-[840px] h-auto border-[1px] border-[#FAFAFA26] rounded-[1000px] backdrop-blur-[150px] flex justify-between items-center">
-        <div class="flex justify-center items-center">
-            <img src="img/avatars.png" class="pl-[24px]">
-            <p class="font-sans text-[#FAFAFA] text-[16px] pl-[16px]">
-                25к Пользователей
-            </p>
-        </div>
-
-
-        <div>
-            <button
-                class="bg-[#FAFAFA1A]/90 w-[189px] h-[48px] rounded-[1000px] my-[8px] mr-[8px] animated-border cursor-pointer hover:scale-95 duration-600">
-                <p class="font-[#FAFAFA] text-[18px] m-0">
-                    Авторизация
-                </p>
+            class="flex justify-center items-center border-b-[1px] border-[#FAFAFA1A]/90 backdrop-blur-[40px] w-full h-16">
+        <button
+                class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:bg-[#FFFFFF]/5 w-auto h-[43px] justify-center items-center hidden xs:block mx-[32px]">
+            <span class="px-[24px]">Авторизоваться</span>
+        </button>
+        <button
+                class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:bg-[#FFFFFF]/5 w-auto h-[43px] justify-center items-center hidden xs:block mx-[32px]"
+                onclick="scrollToAnchor()">
+            <span class="px-[24px]">FAQ</span>
+        </button>
+        <button
+                class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:bg-[#FFFFFF]/5 w-auto h-[43px] justify-center items-center hidden xs:block mx-[32px]"
+                onclick="scrollToDonate()">
+            <span class="px-[24px]">Поддержка</span>
+        </button>
+        <button
+                class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:bg-[#FFFFFF]/5 w-auto h-[43px] justify-center items-center hidden xs:block mx-[32px]">
+            <span class="px-[24px]"> <a href="https://discord.com/invite/d2rulfg" target="_blank">Discord</a></span>
+        </button>
+        <div class="text-center absolute right-10">
+            <button id="drawer-toggle-button" class="xs:hidden z-50" type="button">
+                <img id="drawer-open-icon" src="img/Drawer.svg" alt="Open Drawer"
+                     class="block"/>
+                <img id="drawer-close-icon" src="img/Vector.svg" alt="Close Drawer"
+                     class="hidden"/>
             </button>
         </div>
     </div>
+</header>
 
-    <div>
-        <button class="flex flex-col items-center justify-center cursor-pointer hover:scale-95 duration-600 pt-48">
-            <p class="font-medium font-sans text-[18px]" onclick="scrollToAnchor()">
-                Подробнее
+
+<div class="w-screen xs:h-full relative custom-bg-phone-1 custom-bg-1 h-screen">
+    <div class="w-full min-h-screen flex flex-col relative">
+        <div id="drawer-top-example"
+             class="fixed top-[-100px] right-0 z-40 w-full transition-transform -translate-y-full scheme-transparent backdrop-blur-[40px] pt-25"
+             tabindex="-1" aria-labelledby="drawer-top-label">
+            <div class="mt-16">
+                <button class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative">
+                    <a class="w-full h-full flex items-center justify-center">
+                        Авторизоваться
+                    </a>
+                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         class="absolute right-11">
+                        <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative" onclick="scrollToAnchor()">
+                    <a class="w-full h-full flex items-center justify-center">
+                        FAQ
+                    </a>
+                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         class="absolute right-11">
+                        <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button
+                        class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative" onclick="scrollToDonate()">
+                    <a class="w-full h-full flex items-center justify-center">
+                        Поддержка
+                    </a>
+                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         class="absolute right-11">
+                        <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button
+                        class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative">
+                    <a href="https://discord.com/invite/d2rulfg" target="_blank"
+                       class="w-full h-full flex items-center justify-center">
+                        Discord
+                    </a>
+                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         class="absolute right-11">
+                        <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <main class="inline-block pt-[320px] xs:pt-[334px]">
+            <div class="h-auto flex-grow flex items-center justify-center">
+                <img src="img/logo.svg"
+                     class="w-[215px] h-[100px] xs:w-[327px] xs:h-[152px] mb-[50px]">
+            </div>
+            <div class="xs:hidden flex-grow flex items-center justify-center">
+                <button class="bg-[#FAFAFA1A]/90 w-[173px] h-[43px] rounded-[1000px] backdrop-blur-[150px]">
+                    <p class="font-[#FAFAFA] text-[18px] m-0">
+                        Авторизация
+                    </p>
+                </button>
+            </div>
+
+            <div class="flex-grow flex items-center justify-center">
+                <div class="bg-[#000000]/30 w-[840px] h-[62px] border-[1px] border-[#FAFAFA26] rounded-[1000px] backdrop-blur-[150px] flex justify-between items-center hidden xs:flex">
+                    <div class="flex justify-center items-center">
+                        <img src="img/avatars.png" class="pl-[24px]">
+                        <p class="font-sans text-[#FAFAFA] text-[16px] pl-[16px]">
+                            25к+ Стражей
+                        </p>
+                    </div>
+
+                    <div>
+                        <button class="bg-[#FAFAFA1A]/90 w-[189px] h-[48px] rounded-[1000px] my-[8px] mr-[8px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white">
+                            <p class="font-[#FAFAFA] text-[18px] m-0">
+                                Авторизация
+                            </p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-grow flex items-center justify-center pt-[147px] xs:pt-[194px]">
+                <button class="flex flex-col items-center justify-center cursor-pointer hover:scale-95 duration-600">
+                    <p class="font-medium font-sans text-[14px] xs:text-[18px] text-white" onclick="scrollToAnchor()">
+                        Подробнее
+                    </p>
+                    <img src="img/arrow.svg" class="mt-2">
+                </button>
+            </div>
+        </main>
+    </div>
+</div>
+<div class="w-screen h-screen flex flex-col items-center relative custom-bg-2 custom-bg-phone-2 pt-[84px] xs:pt-[118px]">
+
+    <div class="flex items-center justify-center flex-col">
+        <div class="text-white w-full max-w-[840px]">
+            <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left pt-16 " id="FAQ">
+                FAQ
             </p>
-            <img src="img/arrow.svg" class="mt-2">
-        </button>
+            <p class="py-5 text-[18px] pl-[25px] pr-[7px] xs:px-0 font-sans my-[0px] xs:mb-5 w-full xs:mt-4">
+                Часто задаваемые вопросы по поводу регистрации на сервере.
+                Не нашел ответа на свой вопрос? Напиши одному из наших модераторов!
+            </p>
+        </div>
+
+        <!-- Collapse -->
+        <div class="join join-vertical w-full max-w-[840px] custom-collapse flex flex-col items-center justify-center">
+            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-x-0 border-y-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+                <input type="checkbox" name="my-accordion-4" checked="checked" class="collapse-toggle inline-block"/>
+                <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]">Безопасна ли авторизация на вашем сайте?</span>
+                </div>
+                <div class="collapse-content font-sans text-[14px] xs:text-[16px] font-[#FAFAFA]/85">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-[#FAFAFA]/60">
+                        Авторизация на сайте абсолютно безопасна. Единственная информация, которой вы делитесь с нашим ботом
+                        является ваш Discord ID, Bungie ID и общедоступная информация аккаунта вашей игровой платформы. Вся
+                        личная информация, включая вашу почту, логин и пароль бот не получает. <br><br>
+                        Сайт имеет лицензированный сертификат безопасности а также содержит безопасные HTTPS заголовки, поэтому
+                        информация ваших аккаунтов будет надежно защищена
+                    </span>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+                <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
+                <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]">Как узнать,что авторизация прошла успешно?</span>
+                </div>
+                <div class="collapse-content font-sans text-[14px] xs:text-[16px] font-[#FAFAFA]/85">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-[#FAFAFA]/60">
+                        Если вы прошли авторизацию, то на сервере discord, в канале <b class="font-bold text-white">авторизованные-пользователи</b> придет
+                        следующее уведомление от бота:<br><br>
+                        - Регистрация успешно завершена! <br>
+                        - Ваш MembershipID: Ваши цифры <br>
+                        - Ваш DiscordID: Ваши цифры
+                    </span>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+                <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
+                <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]"> Что делать, если не получается авторизоваться на сайте?</span>
+                </div>
+                <div class="collapse-content font-sans text-[14px] xs:text-[16px] font-[#FAFAFA]/85">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-[#FAFAFA]/60">
+                        Вы можете встретить следующие ошибки от бота при закрытом профиле Bungie.net:<br><br>
+                        <p class="font-medium"> 1. Произошла ошибка. У вас закрыт профиль Destiny 2.</p>
+                        <p class="line"> Пожалуйста, откройте профиль на момент авторизации, после чего можете его закрыть.
+                            Чтобы открыть профиль, перейдите на сайт <a href="https://www.bungie.net/ru" class="text-blue-500" target="_blank">https://www.bungie.net/ru</a> и в
+                            настройках конфиденциальности профиля Destiny включите пункты "Показывать мой прогресс" и
+                            "Показывать мою ленту событий".</p><br>
+                        <p class="font-medium"> 2. У вас недостаточно очков триумфов чтобы использовать все функции этого
+                            сервера. Пожалуйста, наберите как минимум 3000 очков триумфов и пройдите авторизацию ещё раз.</p>
+                        <p class="line"> Для решения этой ошибки требуется набрать 3 000 очков игровых триумфов а затем
+                            повторить авторизацию.</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+                <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
+                <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]">Что дает авторизация на сервере?</span>
+                </div>
+                <div class="collapse-content font-sans text-[14px] xs:text-[16px] font-[#FAFAFA]/85">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-[#FAFAFA]/60">
+                        При авторизации получаете полный доступ к функционалу сервера: социальные чаты, голосовые комнаты и возможность набора людей. При создании
+                        голосовых комнат перед вашим ником будет автоматически указан Bungie ID и гиперссылка на ваш
+                        <a href="https://raid.report/" class="text-blue-500" target="blank">Raid Report</a>,
+                        <a href="https://dungeon.report/" class="text-blue-500" target="blank">Dungeon Report</a>,
+                        <a href="https://trials.report/" class="text-blue-500" target="blank">Trials Report</a> и др. что является приятным дополнением к уже существующим удобствам.
+                    </span>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 border-b-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+                <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
+                <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]"> Ошибки приватности</span>
+                </div>
+                <div class="collapse-content font-sans text-[14px] xs:text-[16px] font-[#FAFAFA]/85">
+                    <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-[#FAFAFA]/60">
+                        Переходите на сайт
+                        <a href="https://www.bungie.net/7/en/User/Account/AccountLinking" class="text-blue-500" target="_blank">bungie</a>
+                        и в настройках учетной записи, в разделе привязки учетной записи, откройте профили всех привязанных аккаунтов, поставив галочки напротив каждого.
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<div class="w-screen flex flex-col items-center justify-center pt-[100px] mb-[100px] xs:mb-[400px] h-screen">
+    <div class="flex flex-col items-center justify-center w-full max-w-[840px]">
+        <div>
+            <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left mb-[32px] text-white" id="Donate">
+                Поддержка
+            </p>
+            <p class="text-[14px] xs:text-[18px] px-[16px] xs:px-0 text-white">
+                При донате в размере <span class="font-bold">1 500 рублей</span> вы навсегда получите роль <span class="font-bold text-[#5865F2]">@Меценаты</span>. Наличие этой роли позволяет получить
+                все перки максимального текстового уровня сервера, выбрать понравившийся из списка цвет никнейма, дает возможность в любое время менять никнейм, стримить в любом канале, а также
+                наделяет особыми правами в голосовых комнатах.
+            </p>
+        </div>
+    </div>
+    <div
+            class="stock-ticker min-h-[70px] xs:[mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] my-[32px] xs:my-[16px] w-screen! xs:w-[60%]! ">
+        <ul>
+            <li>
+                <img src="img/slider/donater-1.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-2.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-3.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-4.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-5.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-6.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-7.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-8.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-9.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-10.png" alt=""/>
+            </li>
+        </ul>
 
-<div class="mb-[100px] sm:mb-[200px] md:mb-[300px] xl:mb-[500px] 2xl:mb-[700px] 3xl:mb-[1300px]">
-    <div>
-        <p class="font-bold text-[72px] font-sans mt-72" id="FAQ">
-            FAQ
+        <ul aria-hidden="true" class="mx-0 px-0 inline-block">
+            <li>
+                <img src="img/slider/donater-1.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-2.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-3.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-4.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-5.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-6.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-7.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-8.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-9.png" alt=""/>
+            </li>
+            <li>
+                <img src="img/slider/donater-10.png" alt=""/>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center w-full max-w-[840px]">
+        <p class="text-[14px] xs:text-[18px] px-[16px] xs:px-0 text-white">
+            При наличии роли <span class="font-bold text-[#5865F2] text-center xs:text-left">@Меценаты</span> и
+            донате в размере дополнительных
+            <span class="font-bold">1 500 рублей</span> рублей вы получаете право на собственную
+            именную роль с возможностью выбора любого цвета, эмодзи и названия, не нарушающего правила сервера.
+            Кроме того, роль выделяется выше всех остальных ролей елей в списке справа.
         </p>
-        <p class="mb-10">
-            Часто задаваемые вопросы по поводу регистрации на сервере.<br>
-            Не нашел ответа на свой вопрос? Напиши одному из наших модераторов!
+        <p class="mt-10 px-[16px] xs:px-0 text-[14px] xs:text-[18px] text-white">
+            Роль <span class="font-bold text-[#5865F2]">@Меценаты</span> и <span class="font-bold text-[#E44235]">@Кастомная роль</span>
+            и все ее возможности остаются навсегда, однако, при многочисленных нарушениях
+            администрация сервера вправе временно или перманентно лишить еля данной роли без возврата денежных
+            средств. Никаких теневых ролей донатеров не планируется. За реквизитами обращайтесь к @ORIX. Подробную
+            информацию о роли и ее функционале можно найти в канале
+            <a href="https://discord.com/channels/372150439728381953/826757089073692702" target="_blank" class="text-blue-500">#поддержка сервера</a>
         </p>
     </div>
-
-    <div class="join join-vertical">
-        <div
-            class="collapse collapse-arrow custom-collapse join-item border-[#FFFFFF]/10 border-x-0 border-y-1 w-[840px] bg-[#FFFFFF]/1 backdrop-blur-[150px]">
-            <input type="checkbox" name="my-accordion-4" checked="checked" class="collapse-toggle "/>
-            <div class="collapse-title font-medium text-[20px]">
-                Безопасна ли авторизация на вашем сайте?
-            </div>
-            <div class="collapse-content font-sans text-[16px] font-[#FAFAFA]/85">
-                Да, авторизация на сервере абсолютно безопасна. Единственная информация, которой вы делитесь с
-                нашим ботом является ваш Discord ID, Bungie ID и общедоступная информация аккаунта вашей игровой
-                платформы.
-                Вся личная информация, включая вашу почту, логин, пароль бот не получает. Сайт имеет лицензированный
-                сертификат безопасности, поэтому даже такая общедоступная информация ваших аккаунтов будет надежно
-                защищена.
-            </div>
-        </div>
-        <div
-            class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-[840px] bg-[#FFFFFF]/1 backdrop-blur-[150px] ">
-            <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
-            <div class="collapse-title font-medium text-[20px]">Как узнать, что авторизация прошла успешно?</div>
-            <div class="collapse-content font-sans text-[16px] font-[#FAFAFA]/85">
-                Если вы прошли авторизацию, то на сервере discord, в канале <b>авторизованные-пользователи</b> придет
-                следующее уведомление от бота:<br><br>
-                - Регистрация успешно завершена! <br>
-                - Ваш MembershipID: Ваши цифры <br>
-                - Ваш DiscordID: Ваши цифры
-            </div>
-        </div>
-        <div
-            class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-[840px] bg-[#FFFFFF]/1 backdrop-blur-[150px] ">
-            <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
-            <div class="collapse-title font-medium text-[20px]">Что делать, если не получается авторизоваться на
-                сайте?
-            </div>
-            <div class="collapse-content font-sans text-[16px] font-[#FAFAFA]/85"> Вы можете встретить следующие ошибки
-                от бота при закрытом профиле Bungie.net:<br><br>
-                <p class="font-medium"> 1. Произошла ошибка. У вас закрыт профиль Destiny 2.</p>
-                <p class="line"> Пожалуйста, откройте профиль на момент авторизации, после чего можете его закрыть.
-                    Чтобы открыть профиль, перейдите на сайт <a href="https://www.bungie.net/ru" class="text-blue-500"
-                                                                target="_blank">https://www.bungie.net/ru</a> и в
-                    настройках конфиденциальности профиля Destiny включите пункты "Показывать мой прогресс" и
-                    "Показывать мою ленту событий".</p><br>
-                <p class="font-medium"> 2. У вас недостаточно очков триумфов чтобы использовать все функции этого
-                    сервера. Пожалуйста, наберите как минимум 3000 очков триумфов и пройдите авторизацию ещё раз.</p>
-                <p class="line"> Для решения этой ошибки требуется набрать 3 000 очков игровых триумфов а затем
-                    повторить авторизацию.</p>
-            </div>
-        </div>
-        <div
-            class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-[840px] bg-[#FFFFFF]/1 backdrop-blur-[150px]">
-            <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
-            <div class="collapse-title font-medium text-[20px]">Что дает авторизация на сервере?</div>
-            <div class="collapse-content font-sans text-[16px] font-[#FAFAFA]/85">Вы получаете полный доступ к
-                функционалу сервера: социальные чаты, голосовые комнаты и возможность набора людей. При создании
-                голосовых комнат перед вашим ником будет автоматически указан Bungie ID и гиперссылка на ваш <a
-                    href="https://raid.report/" class="text-blue-500" target="blank">Raid
-                    Report</a>, <a href="https://dungeon.report/" class="text-blue-500" target="blank">Dungeon
-                    Report</a>, <a href="https://trials.report/" class="text-blue-500" target="blank">Trials Report</a>
-                и др. что
-                является приятным
-                дополнением к уже существующим
-                удобствам.
-            </div>
-        </div>
-        <div
-            class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 border-b-1 w-[840px] bg-[#FFFFFF]/1 backdrop-blur-[150px]">
-            <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
-            <div class="collapse-title font-medium text-[20px]">Ошибки приватности</div>
-            <div class="collapse-content font-sans text-[16px] font-[#FAFAFA]/85">Перейдите на сайт
-                <a href="https://www.bungie.net/7/en/User/Account/AccountLinking" class="text-blue-500" target="_blank">https://www.bungie.net/7/en/User/Account/AccountLinking</a>
-                и в настройках учетной записи, в разделе
-                привязки учетной записи, откройте профили всех привязанных аккаунтов, поставив галочки напротив каждого.
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="w-[840px]">
-
-    <p class="font-bold text-[72px] font-sans mb-8" id="Donate">
-        Поддержка
-    </p>
-    <p class="mb-5">
-        При донате в размере <span class="font-bold">1 500 рублей</span> вы навсегда получите роль <span
-        class="font-bold text-[#ff8700]">@Меценаты</span>.
-        Наличие этой роли позволяет получить все
-        перки максимального текстового уровня сервера, выбрать понравившийся из списка цвет никнейма, дает возможность в
-        любое время менять никнейм, стримить в любом канале, а также наделяет особыми правами в голосовых комнатах.
-    </p>
-</div>
-
-
-<div class="stock-ticker h-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-    <ul>
-        <li>
-            <img src="img/slider/donater-1.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-2.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-3.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-4.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-5.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-6.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-7.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-8.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-9.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-10.svg" alt=""/>
-        </li>
-    </ul>
-
-    <ul aria-hidden="true" class="mx-0 px-0 inline-block">
-        <li>
-            <img src="img/slider/donater-1.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-2.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-3.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-4.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-5.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-6.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-7.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-8.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-9.svg" alt=""/>
-        </li>
-        <li>
-            <img src="img/slider/donater-10.svg" alt=""/>
-        </li>
-    </ul>
-</div>
-
-<div class="w-[840px]">
-    <p class="mt-5">
-        При наличии роли <span class="font-bold text-[#ff8700]">@Меценаты</span> и донате в размере дополнительных
-        <span
-            class="font-bold">1 500 рублей</span> рублей вы получаете право на собственную
-        именную роль с возможностью выбора любого цвета, эмодзи и названия, не нарушающего правила сервера. Кроме
-        того,
-        роль выделяется выше всех остальных ролей пользователей в списке справа.
-    </p>
-    <p class="mt-10 mb-72">
-        Роль <span class="font-bold text-[#ff8700]">@Меценаты</span> и <span class="font-bold text-red-500">@Кастомная роль</span>
-        и все ее возможности остаются навсегда, однако, при многочисленных нарушениях
-        администрация сервера вправе временно или перманентно лишить пользователя данной роли без возврата денежных
-        средств. Никаких теневых ролей донатеров не планируется. За реквизитами обращайтесь к @ORIX. Подробную
-        информацию о роли и ее функционале можно найти в канале <a
-        href="https://discord.com/channels/372150439728381953/826757089073692702" target="_blank"
-        class="text-blue-500">#поддержка
-        сервера</a>
-    </p>
 </div>
 </body>
 </html>
+
+
+

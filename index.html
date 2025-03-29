@@ -4,11 +4,14 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="assets/app-DJejeUAR.css"><link>
-    <script src="assets/app-YWqhOUue.js"></script>
+    <link rel="stylesheet" href="assets/app-BuF8qOOx.css"><link>
+<!--    <script src="assets/app-BKMHWftW.js"></script>-->
+    <title>Destiny 2 RU LFG</title>
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body class="full-screen-container min-h-screen w-auto bg-black">
+
 
 
 <header class="flex justify-center items-center w-screen h-16 z-200 fixed top-0">
@@ -16,7 +19,7 @@
     <div
             class="flex justify-center items-center border-b-[1px] border-[#FAFAFA1A]/90 backdrop-blur-[40px] w-full h-16">
         <button
-                class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:bg-[#FFFFFF]/5 w-auto h-[43px] justify-center items-center hidden xs:block mx-[32px]">
+                class="text-[16px] text-[#FAFAFAD9]/85 cursor-pointer hover:bg-[#FFFFFF]/5 w-auto h-[43px] justify-center items-center hidden xs:block mx-[32px]" id="Auth1">
             <span class="px-[24px]">Авторизоваться</span>
         </button>
         <button
@@ -51,10 +54,10 @@
              class="fixed top-[-100px] right-0 z-40 w-full transition-transform -translate-y-full scheme-transparent backdrop-blur-[40px] pt-25"
              tabindex="-1" aria-labelledby="drawer-top-label">
             <div class="mt-16">
-                <button class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative">
-                    <a class="w-full h-full flex items-center justify-center">
+                <button class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative" id="Auth2">
+                    <span class="w-full h-full flex items-center justify-center">
                         Авторизоваться
-                    </a>
+                    </span>
                     <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
                          class="absolute right-11">
                         <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
@@ -62,9 +65,9 @@
                     </svg>
                 </button>
                 <button class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative" onclick="scrollToAnchor()">
-                    <a class="w-full h-full flex items-center justify-center">
+                    <span class="w-full h-full flex items-center justify-center">
                         FAQ
-                    </a>
+                    </span>
                     <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
                          class="absolute right-11">
                         <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
@@ -73,9 +76,9 @@
                 </button>
                 <button
                         class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative" onclick="scrollToDonate()">
-                    <a class="w-full h-full flex items-center justify-center">
+                    <span class="w-full h-full flex items-center justify-center">
                         Поддержка
-                    </a>
+                    </span>
                     <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
                          class="absolute right-11">
                         <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
@@ -90,12 +93,13 @@
                     </a>
                     <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"
                          class="absolute right-11">
-                        <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M0.999999 0.999999L11 11L1 21" stroke="#FAFAFA" stroke-width="1.5"
+                              stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
             </div>
         </div>
-        <main class="inline-block pt-[320px] xs:pt-[334px]">
+        <main class="inline-block pt-[320px] xs:pt-[334px] m:pt-[500px]">
             <div class="h-auto flex-grow flex items-center justify-center">
                 <img src="img/logo.svg"
                      class="w-[215px] h-[100px] xs:w-[327px] xs:h-[152px] mb-[50px]">
@@ -108,17 +112,23 @@
                 </button>
             </div>
 
-            <div class="flex-grow flex items-center justify-center">
-                <div class="bg-[#000000]/30 w-[840px] h-[62px] border-[1px] border-[#FAFAFA26] rounded-[1000px] backdrop-blur-[150px] flex justify-between items-center hidden xs:flex">
-                    <div class="flex justify-center items-center">
-                        <img src="img/avatars.png" class="pl-[24px]">
+            <div class="flex-grow flex items-center justify-center mt-50 gradient-border">
+                <div class="bg-[#000000]/30 w-[840px] h-[62px] backdrop-blur-[1px] justify-between items-center hidden xs:flex custom-border1">
+
+                    <div class="flex justify-center items-center " id="image-container">
+                        <img src="img/icons/icon1.png" class="pl-[24px] image">
+                        <img src="img/icons/icon2.png" class="ml-[-19px] image">
+                        <img src="img/icons/icon3.png" class="ml-[-19px] image">
+                        <img src="img/icons/icon4.png" class="ml-[-19px] image">
+                        <img src="img/icons/icon5.png" class="ml-[-19px] image">
+                        <img src="img/icons/icon6.png" class="ml-[-19px] image">
                         <p class="font-sans text-[#FAFAFA] text-[16px] pl-[16px]">
                             25к+ Стражей
                         </p>
                     </div>
-
                     <div>
-                        <button class="bg-[#FAFAFA1A]/90 w-[189px] h-[48px] rounded-[1000px] my-[8px] mr-[8px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white">
+                        <button
+                                class="bg-[#FAFAFA1A]/90 w-[189px] h-[48px] rounded-[1000px] my-[8px] mr-[8px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white">
                             <p class="font-[#FAFAFA] text-[18px] m-0">
                                 Авторизация
                             </p>
@@ -128,11 +138,11 @@
             </div>
 
             <div class="flex-grow flex items-center justify-center pt-[147px] xs:pt-[194px]">
-                <button class="flex flex-col items-center justify-center cursor-pointer hover:scale-95 duration-600">
-                    <p class="font-medium font-sans text-[14px] xs:text-[18px] text-white" onclick="scrollToAnchor()">
-                        Подробнее
-                    </p>
-                    <img src="img/arrow.svg" class="mt-2">
+                <button
+                        class="flex flex-col items-center justify-center cursor-pointer hover:scale-95 duration-600">
+                    <span class="font-medium font-sans text-[14px] xs:text-[18px] text-white pointer-events: none;" onclick="scrollToAnchor()">
+                        Подробнее <br> ⌵
+                    </span>
                 </button>
             </div>
         </main>
@@ -150,11 +160,9 @@
                 Не нашел ответа на свой вопрос? Напиши одному из наших модераторов!
             </p>
         </div>
-
-        <!-- Collapse -->
         <div class="join join-vertical w-full max-w-[840px] custom-collapse flex flex-col items-center justify-center">
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-x-0 border-y-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
-                <input type="checkbox" name="my-accordion-4" checked="checked" class="collapse-toggle inline-block"/>
+                <input type="checkbox" name="my-accordion-4" class="collapse-toggle inline-block"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
                     <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]">Безопасна ли авторизация на вашем сайте?</span>
                 </div>
@@ -163,12 +171,12 @@
                         Авторизация на сайте абсолютно безопасна. Единственная информация, которой вы делитесь с нашим ботом
                         является ваш Discord ID, Bungie ID и общедоступная информация аккаунта вашей игровой платформы. Вся
                         личная информация, включая вашу почту, логин и пароль бот не получает. <br><br>
+
                         Сайт имеет лицензированный сертификат безопасности а также содержит безопасные HTTPS заголовки, поэтому
                         информация ваших аккаунтов будет надежно защищена
                     </span>
                 </div>
             </div>
-
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -184,7 +192,6 @@
                     </span>
                 </div>
             </div>
-
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -205,7 +212,6 @@
                     </span>
                 </div>
             </div>
-
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -221,7 +227,6 @@
                     </span>
                 </div>
             </div>
-
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 border-b-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -241,7 +246,7 @@
 <div class="w-screen flex flex-col items-center justify-center pt-[100px] mb-[100px] xs:mb-[400px] h-screen">
     <div class="flex flex-col items-center justify-center w-full max-w-[840px]">
         <div>
-            <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left mb-[32px] text-white" id="Donate">
+            <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left mb-[32px] text-white pt-16" id="Donate">
                 Поддержка
             </p>
             <p class="text-[14px] xs:text-[18px] px-[16px] xs:px-0 text-white">
@@ -339,6 +344,7 @@
         </p>
     </div>
 </div>
+<script src="assets/app-DV1pfpBj.js"></script>
 </body>
 </html>
 

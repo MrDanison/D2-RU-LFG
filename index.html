@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="assets/app-BuF8qOOx.css"><link>
-<!--    <script src="assets/app-BKMHWftW.js"></script>-->
+    <link rel="stylesheet" href="assets/app-DvkFN2nC.css"><link>
     <title>Destiny 2 RU LFG</title>
     <link rel="icon" href="favicon.ico">
 </head>
@@ -46,9 +45,7 @@
         </div>
     </div>
 </header>
-
-
-<div class="w-screen xs:h-full relative custom-bg-phone-1 custom-bg-1 h-screen">
+<div class="w-screen xs:h-full relative custom-bg-phone-1 custom-bg-1 min-h-screen">
     <div class="w-full min-h-screen flex flex-col relative">
         <div id="drawer-top-example"
              class="fixed top-[-100px] right-0 z-40 w-full transition-transform -translate-y-full scheme-transparent backdrop-blur-[40px] pt-25"
@@ -99,12 +96,14 @@
                 </button>
             </div>
         </div>
-        <main class="inline-block pt-[320px] xs:pt-[334px] m:pt-[500px]">
-            <div class="h-auto flex-grow flex items-center justify-center">
+
+        <!-- Основной контент -->
+        <main class="inline-block pt-[320px] xs:pt-[334px] m:pt-[370px] l:mt-[110px]">
+            <div class=" flex-grow flex items-center justify-center">
                 <img src="img/logo.svg"
-                     class="w-[215px] h-[100px] xs:w-[327px] xs:h-[152px] mb-[50px]">
+                     class="w-[215px] h-[100px] xs:w-[327px] xs:h-[152px]">
             </div>
-            <div class="xs:hidden flex-grow flex items-center justify-center">
+            <div class="xs:hidden flex-grow flex items-center justify-center mt-[50px]">
                 <button class="bg-[#FAFAFA1A]/90 w-[173px] h-[43px] rounded-[1000px] backdrop-blur-[150px]">
                     <p class="font-[#FAFAFA] text-[18px] m-0">
                         Авторизация
@@ -112,8 +111,8 @@
                 </button>
             </div>
 
-            <div class="flex-grow flex items-center justify-center mt-50 gradient-border">
-                <div class="bg-[#000000]/30 w-[840px] h-[62px] backdrop-blur-[1px] justify-between items-center hidden xs:flex custom-border1">
+            <div class="flex-grow flex items-center justify-center mt-[50px] gradient-border">
+                <div class="bg-[#000000]/30 w-[840px] h-[62px] backdrop-blur-[150px] justify-between items-center hidden xs:flex custom-border1 rounded-[1000px]">
 
                     <div class="flex justify-center items-center " id="image-container">
                         <img src="img/icons/icon1.png" class="pl-[24px] image">
@@ -137,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="flex-grow flex items-center justify-center pt-[147px] xs:pt-[194px]">
+            <div class="flex-grow flex items-center justify-center pt-[147px] m:pt-[100px] l:pt-[194px]">
                 <button
                         class="flex flex-col items-center justify-center cursor-pointer hover:scale-95 duration-600">
                     <span class="font-medium font-sans text-[14px] xs:text-[18px] text-white pointer-events: none;" onclick="scrollToAnchor()">
@@ -148,10 +147,11 @@
         </main>
     </div>
 </div>
-<div class="w-screen h-screen flex flex-col items-center relative custom-bg-2 custom-bg-phone-2 pt-[84px] xs:pt-[118px]">
+<div class="w-screen flex flex-col items-center relative pt-[84px] xs:pt-[118px] xs:h-[1000px] custom-bg-2">
+    <div class="custom-bg-phone-2 h-[380px] z-0 mb-[-300px] xs:hidden"></div>
 
-    <div class="flex items-center justify-center flex-col">
-        <div class="text-white w-full max-w-[840px]">
+    <div class="flex items-center justify-center flex-col z-10">
+        <div class="text-white w-full max-w-[840px] ">
             <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left pt-16 " id="FAQ">
                 FAQ
             </p>
@@ -160,8 +160,10 @@
                 Не нашел ответа на свой вопрос? Напиши одному из наших модераторов!
             </p>
         </div>
-        <div class="join join-vertical w-full max-w-[840px] custom-collapse flex flex-col items-center justify-center">
-            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-x-0 border-y-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+
+        <!-- Collapse -->
+        <div class="join join-vertical w-full max-w-[840px] custom-collapse flex flex-col items-center justify-center z-5 bg-black xs:bg-[#FFFFFF]/1 backdrop-blur-[150px]">
+            <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-x-0 border-y-1 w-full bg-[#FFFFFF]/1">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle inline-block"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
                     <span class="inline-block max-w-auto xs:max-w-full ml-[16px] xs:ml-0 text-white mr-[16px]">Безопасна ли авторизация на вашем сайте?</span>
@@ -177,6 +179,7 @@
                     </span>
                 </div>
             </div>
+
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -212,6 +215,7 @@
                     </span>
                 </div>
             </div>
+
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -243,7 +247,7 @@
         </div>
     </div>
 </div>
-<div class="w-screen flex flex-col items-center justify-center pt-[100px] mb-[100px] xs:mb-[400px] h-screen">
+<div class="w-screen flex flex-col items-center justify-center pt-[100px] mb-[100px] xs:mb-[400px] z-5">
     <div class="flex flex-col items-center justify-center w-full max-w-[840px]">
         <div>
             <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left mb-[32px] text-white pt-16" id="Donate">

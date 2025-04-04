@@ -1,18 +1,14 @@
 <!doctype html>
-<html>
+<html class="custom-scroll-container">
 
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="assets/app-DvkFN2nC.css"><link>
-    <title>Destiny 2 RU LFG</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./assets/app-JMruTGjq.css"/>
+    <link rel="icon" href="Favicon.ico">
 </head>
 
 <body class="full-screen-container min-h-screen w-auto bg-black">
-
-
-
 <header class="flex justify-center items-center w-screen h-16 z-200 fixed top-0">
     <img src="img/logo-up.svg" class="absolute left-10 xl:left-60 xs:block z-10">
     <div
@@ -45,10 +41,12 @@
         </div>
     </div>
 </header>
+
+
 <div class="w-screen xs:h-full relative custom-bg-phone-1 custom-bg-1 min-h-screen">
     <div class="w-full min-h-screen flex flex-col relative">
         <div id="drawer-top-example"
-             class="fixed top-[-100px] right-0 z-40 w-full transition-transform -translate-y-full scheme-transparent backdrop-blur-[40px] pt-25"
+             class="fixed top-[-100px] right-0 z-40 w-full transition-transform -translate-y-full scheme-transparent backdrop-blur-[40px] pt-25 duration-700"
              tabindex="-1" aria-labelledby="drawer-top-label">
             <div class="mt-16">
                 <button class="h-[54px] w-screen bg-[#000000]/10 border-b-[1px] border-[#FAFAFA]/10 flex items-center justify-center relative" id="Auth2">
@@ -97,15 +95,17 @@
             </div>
         </div>
 
-        <!-- Основной контент -->
-        <main class="inline-block pt-[320px] xs:pt-[334px] m:pt-[370px] l:mt-[110px]">
+        <main class="inline-block pt-[180px] xs:pt-[334px] m:pt-[370px] l:mt-[110px]">
             <div class=" flex-grow flex items-center justify-center">
                 <img src="img/logo.svg"
                      class="w-[215px] h-[100px] xs:w-[327px] xs:h-[152px]">
             </div>
+
+            <!-- Доп-блок авторизации телефон -->
             <div class="xs:hidden flex-grow flex items-center justify-center mt-[50px]">
-                <button class="bg-[#FAFAFA1A]/90 w-[173px] h-[43px] rounded-[1000px] backdrop-blur-[150px]">
-                    <p class="font-[#FAFAFA] text-[18px] m-0">
+                <button data-modal-target="default-modal" data-modal-toggle="default-modal"
+                        class="bg-[#FAFAFA1A]/90 w-[173px] h-[43px] rounded-[1000px] backdrop-blur-[150px]">
+                    <p class="font-[#FAFAFA] text-[18px] m-0" onclick="default_modal1.showModal()">
                         Авторизация
                     </p>
                 </button>
@@ -125,18 +125,18 @@
                             25к+ Стражей
                         </p>
                     </div>
+
                     <div>
-                        <button
-                                class="bg-[#FAFAFA1A]/90 w-[189px] h-[48px] rounded-[1000px] my-[8px] mr-[8px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white">
-                            <p class="font-[#FAFAFA] text-[18px] m-0">
-                                Авторизация
-                            </p>
+                        <button onclick="default_modal1.showModal()"
+                                class="bg-[#FAFAFA1A]/90 w-[189px] h-[48px] rounded-[1000px] my-[8px] mr-[8px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white"
+                                type="button">
+                            Авторизация
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="flex-grow flex items-center justify-center pt-[147px] m:pt-[100px] l:pt-[194px]">
+            <div class="flex-grow flex items-center justify-center pt-[80px] m:pt-[100px] l:pt-[194px]">
                 <button
                         class="flex flex-col items-center justify-center cursor-pointer hover:scale-95 duration-600">
                     <span class="font-medium font-sans text-[14px] xs:text-[18px] text-white pointer-events: none;" onclick="scrollToAnchor()">
@@ -146,7 +146,48 @@
             </div>
         </main>
     </div>
+
+    <dialog id="default_modal1" class="modal bg-black/60">
+        <div class="modal-box bg-[#000000]/20 border border-[#FAFAFA]/15 rounded-2xl backdrop-blur-[200px] p-4 sm:p-8 xs:min-w-[746px] xs:max-h-[374px] overflow-hidden ">
+            <!-- Modal header -->
+            <div class="flex items-center justify-between">
+                <h3 class="text-[24px] sm:text-[32px] font-sans font-bold">Авторизация</h3>
+                <button type="button" onclick="default_modal1.close()" aria-label="close modal" class="p-1 cursor-pointer">
+                    <svg width="20" height="20" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13.5L13 1.5M1 1.5L13 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mt-[24px]">
+                <div class="max-w-[682px] text-[#FAFAFA]/85 text-[14px] xs:text-[16px]">
+                    Авторизация производится с помощью Bungie.net и Discord.com
+                </div>
+
+                <div class="pt-[31px] max-w-[682px] text-[#FAFAFA]/85 text-[14px] xs:text-[16px]">
+                    D2 RU LFG получает только ваши BungieID и DiscordID, которые <br> являются публичной информацией.
+                </div>
+
+                <div class="pt-[24px] max-w-[682px] text-[#FAFAFA]/85 text-[14px] xs:text-[16px]">
+                    Ваш логин и пароль <span class="text-[#3BA55C]">не передаются</span> третьим лицам, передача данных защищена протоколами BungieAPI и DiscordAPI.
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center xs:block pt-[15px]">
+                <button class="bg-[#FAFAFA1A]/90 w-[250px] xs:w-[189px] h-[46px] rounded-[1000px] xs:my-[8px] xs:mr-[14px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white mb-4"
+                        type="button">
+                    <span class="text-[18px] font-medium font-sans">Авторизоваться</span>
+                </button>
+                <button class="cursor-pointer text-white" onclick="default_modal1.close()">
+                    <span class="text-[16px] text-[#FAFAFA80]/60">Я передумал</span>
+                </button>
+            </div>
+        </div>
+        <form method="dialog" class="modal-backdrop w-screen h-screen">
+            <button class="cursor-default!"></button>
+        </form>
+    </dialog>
 </div>
+
 <div class="w-screen flex flex-col items-center relative pt-[84px] xs:pt-[118px] xs:h-[1000px] custom-bg-2">
     <div class="custom-bg-phone-2 h-[380px] z-0 mb-[-300px] xs:hidden"></div>
 
@@ -195,6 +236,7 @@
                     </span>
                 </div>
             </div>
+
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -231,6 +273,7 @@
                     </span>
                 </div>
             </div>
+
             <div class="collapse collapse-arrow join-item border-[#FFFFFF]/10 border-t-1 border-b-1 w-full bg-[#FFFFFF]/1 backdrop-blur-[150px]">
                 <input type="checkbox" name="my-accordion-4" class="collapse-toggle"/>
                 <div class="collapse-title font-medium text-[16px] xs:text-[20px]">
@@ -247,7 +290,9 @@
         </div>
     </div>
 </div>
+
 <div class="w-screen flex flex-col items-center justify-center pt-[100px] mb-[100px] xs:mb-[400px] z-5">
+    <!--Поддержка-->
     <div class="flex flex-col items-center justify-center w-full max-w-[840px]">
         <div>
             <p class="font-bold text-[40px] xs:text-[72px] font-sans text-center xs:text-left mb-[32px] text-white pt-16" id="Donate">
@@ -260,8 +305,8 @@
             </p>
         </div>
     </div>
-    <div
-            class="stock-ticker min-h-[70px] xs:[mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] my-[32px] xs:my-[16px] w-screen! xs:w-[60%]! ">
+
+    <div class="stock-ticker min-h-[70px] xs:[mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)] my-[32px] xs:my-[16px] w-screen! xs:w-[60%]! ">
         <ul>
             <li>
                 <img src="img/slider/donater-1.png" alt=""/>
@@ -348,9 +393,69 @@
         </p>
     </div>
 </div>
-<script src="assets/app-DV1pfpBj.js"></script>
+
+<dialog id="default_modal2" class="modal bg-black/60">
+    <div class="modal-box bg-[#000000]/20 border border-[#FAFAFA]/15 rounded-2xl backdrop-blur-[200px] p-4 sm:p-8 xs:max-w-[746px] xs:max-h-[278px] overflow-hidden">
+        <div class="flex items-center justify-between pb-4">
+            <h3 class="text-[24px] sm:text-[32px] font-sans font-bold">Спасибо за авторизацию</h3>
+            <button type="button" onclick="default_modal2.close()" aria-label="close modal" class="p-1">
+                <svg width="20" height="20" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13.5L13 1.5M1 1.5L13 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="pb-4 text-[14px] xs:text-[16px] w-full">
+            Ожидайте сообщения от нашего бота <span class="text-[#5865F2] text-[14px] xs:text-[16px]">@TurtleBot</span> в течение одной минуты в канале #авторизованные-пользователи
+        </div>
+        <div class="mt-4 p-3 border border-[#F2B33E] rounded-xl flex items-start bg-[#F2B33E]/10">
+            <svg width="20" height="20" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 mt-0.5">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.25 10.5C0.25 5.115 4.615 0.75 10 0.75C15.385 0.75 19.75 5.115 19.75 10.5C19.75 15.885 15.385 20.25 10 20.25C4.615 20.25 0.25 15.885 0.25 10.5ZM10 6.75C10.1989 6.75 10.3897 6.82902 10.5303 6.96967C10.671 7.11032 10.75 7.30109 10.75 7.5V11.25C10.75 11.4489 10.671 11.6397 10.5303 11.7803C10.3897 11.921 10.1989 12 10 12C9.80109 12 9.61032 11.921 9.46967 11.7803C9.32902 11.6397 9.25 11.4489 9.25 11.25V7.5C9.25 7.30109 9.32902 7.11032 9.46967 6.96967C9.61032 6.82902 9.80109 6.75 10 6.75ZM10 15C10.1989 15 10.3897 14.921 10.5303 14.7803C10.671 14.6397 10.75 14.4489 10.75 14.25C10.75 14.0511 10.671 13.8603 10.5303 13.7197C10.3897 13.579 10.1989 13.5 10 13.5C9.80109 13.5 9.61032 13.579 9.46967 13.7197C9.32902 13.8603 9.25 14.0511 9.25 14.25C9.25 14.4489 9.32902 14.6397 9.46967 14.7803C9.61032 14.921 9.80109 15 10 15Z"
+                      fill="#F2B33E"/>
+            </svg>
+            <span class="ml-2 text-[14px] xs:text-[16px]">Если вы используете приложение Discord, убедитесь, что авторизовались в браузере с тем же аккаунтом</span>
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button class="cursor-default!"></button>
+    </form>
+</dialog>
+
+<dialog id="default_modal3" class="modal bg-black/60">
+    <div class="modal-box bg-[#000000]/20 border border-[#FAFAFA]/15 rounded-2xl backdrop-blur-[200px] p-4 sm:p-8 xs:max-w-[746px] xs:max-h-[278px] overflow-hidden">
+        <div class="flex items-center justify-between pb-4">
+            <h3 class="text-[24px] sm:text-[32px] font-sans font-bold">Ошибка в авторизации...</h3>
+            <button type="button" onclick="default_modal3.close()" class="p-1 cursor-pointer">
+                <svg width="20" height="20" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 13.5L13 1.5M1 1.5L13 13.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="mt-4 p-3 border border-[#FF3333] rounded-xl flex items-start bg-[#FF3333]/10">
+            <svg width="20" height="20" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 mt-0.5">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.25 10.5C0.25 5.115 4.615 0.75 10 0.75C15.385 0.75 19.75 5.115 19.75 10.5C19.75 15.885 15.385 20.25 10 20.25C4.615 20.25 0.25 15.885 0.25 10.5ZM10 6.75C10.1989 6.75 10.3897 6.82902 10.5303 6.96967C10.671 7.11032 10.75 7.30109 10.75 7.5V11.25C10.75 11.4489 10.671 11.6397 10.5303 11.7803C10.3897 11.921 10.1989 12 10 12C9.80109 12 9.61032 11.921 9.46967 11.7803C9.32902 11.6397 9.25 11.4489 9.25 11.25V7.5C9.25 7.30109 9.32902 7.11032 9.46967 6.96967C9.61032 6.82902 9.80109 6.75 10 6.75ZM10 15C10.1989 15 10.3897 14.921 10.5303 14.7803C10.671 14.6397 10.75 14.4489 10.75 14.25C10.75 14.0511 10.671 13.8603 10.5303 13.7197C10.3897 13.579 10.1989 13.5 10 13.5C9.80109 13.5 9.61032 13.579 9.46967 13.7197C9.32902 13.8603 9.25 14.0511 9.25 14.25C9.25 14.4489 9.32902 14.6397 9.46967 14.7803C9.61032 14.921 9.80109 15 10 15Z"
+                      fill="#FF3333"/>
+            </svg>
+            <span class="ml-2 text-[14px] xs:text-[16px]">Пожалуйста, попробуйте снова или обратитесь к модераторам</span>
+        </div>
+
+        <div class="pt-[30px] flex flex-col items-center xs:block">
+            <button onclick="default_modal3.close();"
+                    class="bg-[#FAFAFA1A]/90 w-[250px] xs:w-[189px] h-[46px] rounded-[1000px] xs:my-[8px] xs:mr-[14px] cursor-pointer backdrop-blur-[150px] hover:border hover:border-white mb-4"
+                    type="button">
+                <span class="text-[18px] font-medium font-sans">Авторизоваться</span>
+            </button>
+            <button class="cursor-pointer text-white" onclick="default_modal3.close()">
+                <span class="text-[16px] text-[#FAFAFA80]/60">Я передумал</span>
+            </button>
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop">
+        <button class="cursor-default!"></button>
+    </form>
+</dialog>
+<script src="assets/app-B3z6LR8s.js"></script>
 </body>
 </html>
-
-
-
